@@ -68,7 +68,7 @@ evaluate <- function(input, envir = parent.frame(), enclos = NULL, debug = FALSE
     }
   }
 
-  unlist(out, recursive = FALSE, use.names = FALSE)
+  structure(unlist(out, recursive = FALSE, use.names = FALSE), class="evaluation")
 }
 
 evaluate_call <- function(call, src = NULL,
